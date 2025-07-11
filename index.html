@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatie Interactiva</title>
+    <link rel="stylesheet" href = "style.css"></link>
+</head>
+<body>
+    <h1> Problema Josephus</h1>
+    <button id = "skip_button", style="visibility: hidden;"> Skip </button>
+    <button id = "restart_button", style="visibility: hidden;"> Restart </button>
+    <p id = 'feedback'></p>
+    
+    <!-- Pentru citirea lui n -->
+    <div class = "Input">
+        <p> Introdu numarul de soldati:</p>
+        <input type="number", min = "1", max="9999", id = "soldati_input">
+        <button id = "soldati_button"> Submit</button>
+    </div>
+    
+    <!-- Pentru citirea lui k -->
+    <div class = "Input">
+        <p> Introdu numarul de ordine al soldatului care va incepe:</p>
+        <input type="number", min="1", max = "9999", id = "k_input">
+        <button id = "k_button"> Submit</button>
+    </div>
+
+
+    <div class = "Soldati"> 
+        
+    </div>
+    <script src = "app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{
+    background-color: cornflowerblue;
+}
+
+h1{
+    font-style: italic;
+    font-size: 10vh;
+    text-align: center;
+    color: crimson
+
+}
+
+.Input{
+    display: flex;
+    gap: 1vh;
+    font-size: 2vh;
+    align-items: baseline;
+}
+input{
+    height: 2vh;
+}
+
+.Soldati{
+    display: flex;
+    gap: 2vh;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Bila{
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 5vh;
+
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#feedback{
+    color:cyan;
+    background-color:rgba(20, 103, 198, 0.672);
+    display: flex;
+    justify-content: center;
+    font-size: 2vh;
+    font-family: cursive;
+}

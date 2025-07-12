@@ -5,6 +5,7 @@ const soldati_button = document.getElementById('soldati_button');
 const k_input = document.getElementById('k_input');
 const k_button = document.getElementById('k_button');
 const feedback = document.getElementById('feedback');
+const feedback_final = document.getElementById('feedback_final')
 const skip_button = document.getElementById("skip_button");
 const restart_button = document.getElementById("restart_button");
 var n, k;
@@ -46,9 +47,9 @@ function setup_k()
         alert("Vezi ca ai introdus o valoare invalida!!!")
     else
     {
-        var nod = Soldati.children[k-1];
-        nod.style.backgroundColor = "rgb(141, 206, 38)"
-        feedback.innerHTML = `${nod.innerHTML} incepe`
+        var nod_start = Soldati.children[0];
+        nod_start.style.backgroundColor = "rgb(141, 206, 38)"
+        feedback.innerHTML = `Varinata ta: ${k}`
         start_game()
     }
 }
@@ -82,7 +83,7 @@ async function start_game()
     });
     skip_button.style.visibility = "visible"
     restart_button.style.visibility = "visible"
-    current = k;
+    current = 1;
     viteza = Math.max(1000 - n * 10, 100);
 
     while(soldiers_arr.length > 1)
@@ -97,7 +98,11 @@ async function start_game()
         current = get_next_soldier(current)
         Soldati.children[current - 1].style.backgroundColor = "rgb(141, 206, 38)"
     }
-    feedback.innerHTML = `${k} incepe si ${soldiers_arr[0]} castiga`
+    feedback.innerHTML = `Varinata ta: ${k}   Raspuns corect: ${soldiers_arr[0]}`
+    if(k == soldiers_arr[0])
+        feedback_final.innerHTML = "Felicitari! Ai fost perspicace :D"
+    else
+        feedback_final.innerHTML = "Nu ai raspuns corect, dar erai pe aproape! :D"
 }
 
 function get_next_soldier(soldier)

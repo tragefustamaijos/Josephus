@@ -43,11 +43,12 @@ input{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#feedback{
+#feedback, #feedback_final{
     color:cyan;
     background-color:rgba(20, 103, 198, 0.672);
     display: flex;
     justify-content: center;
     font-size: 2vh;
     font-family: cursive;
+    
 }
